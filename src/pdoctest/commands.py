@@ -163,9 +163,11 @@ def numeric_intake(
     Has `min` and `max` restrictions on numeric arguments
 
         Usage examples:
-    >>> numeric_intake(4, 333)
+    >>> numeric_intake(4, 3)
+    X: 4, Y: 3
     7
     >>> numeric_intake(4, 2)
+    X: 4, Y: 2
     6
 
     """
