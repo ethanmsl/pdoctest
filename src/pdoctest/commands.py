@@ -1,8 +1,11 @@
-"""
-*De facto* `main`, holding the key functions acting as entry points
+"""*De facto* `main`.
+
+Holds the key functions acting as entry points
 to any other code and acting as the bridge to the user via
 the typer framework and decorators.
 """
+
+from __future__ import annotations
 
 import time
 from importlib import metadata
@@ -13,7 +16,7 @@ from rich import print as rprint
 from rich.progress import Progress, SpinnerColumn, TextColumn, track
 from rich.prompt import Prompt
 
-from . import __name__ as APP_NAME
+from . import __name__ as app_name
 
 # generage CLI app object
 app = typer.Typer(rich_markup_mode="rich", add_completion=False)
@@ -22,13 +25,11 @@ app = typer.Typer(rich_markup_mode="rich", add_completion=False)
 __version__ = metadata.version(__package__)
 
 
-def version_callback(version: bool):
-    """
-    Print app version and exit
-    """
+def version_callback(version: bool) -> None:
+    """Print app version and exit."""
     if version:
-        rprint(f"pdoctest ('pdoc') Version: {__version__}")
-        raise typer.Exit()
+        rprint(f"pdoctest ('{app_name}') Version: {__version__}")
+        raise typer.Exit(0)
 
 
 @app.callback(help="[bold]pdoctest[/bold] CLI App for [green]PagerDuty[/green]")
@@ -39,10 +40,10 @@ def app_options(
         help="Show version of this app",
         callback=version_callback,
         is_eager=True,
-    )
-):
-    """
-    This callback is called by the **base app** itself.
+    ),
+) -> None:
+    """NOTE: The **base app**, itself, calls this callback.
+
     Sub-callbacks are used by the options to perform actions.
     The eager sub-callback allows us to circumvent typer's expectation that a regular
     command is still comming.
@@ -69,7 +70,7 @@ def what_am_i(name: Optional[str] = typer.Argument(None)) -> None:
     # example of using rich-print's MarkUp
     rprint(
         f"[green]Why you are [bold red]loved[/bold red][/green] \
-[blue]{name_out}[/blue][green]![/green] :heart:"
+[blue]{name_out}[/blue][green]![/green] :heart:",
     )
 
 
@@ -85,17 +86,16 @@ def pword(
     ),
     # NOTE: we would NOT want this as it allows explicit flag calling and regular
     #       code inputing
-):
-    """Example use of \"hide_input\" true."""
-
+) -> None:
+    r"""Use \"hide_input\" as an example."""
     rprint(
-        f"Hello [blue]{name}[/blue]. Doing something very secure :lock: with password."
+        f"Hello [blue]{name}[/blue]. Doing something very secure :lock: with password.",
     )
 
 
 @app.command(rich_help_panel="Prompted")
 def adding_tags() -> None:
-    """Example of using rich's prompt to add tags to a ticket"""
+    """Add tags to a ticket, as example use of prompt + append."""
     tags = []
     while True:
         tag = Prompt.ask("Enter a tag, or [bold red]q[/bold red] to quit")
@@ -113,7 +113,6 @@ def adding_tags() -> None:
 @app.command(rich_help_panel="Visual")
 def spin(seconds: int = typer.Argument(5, min=1, max=36)) -> None:
     """Spinners for the unknowably long and asynchronous."""
-
     with Progress(
         SpinnerColumn(),
         TextColumn("[progress.description]{task.description}", justify="right"),
@@ -128,12 +127,10 @@ def spin(seconds: int = typer.Argument(5, min=1, max=36)) -> None:
 
 @app.command(rich_help_panel="Visual")
 def progbar(
-    seconds: int = typer.Argument(5, min=1, max=16), plain_bar: bool = False
+    seconds: int = typer.Argument(5, min=1, max=16),
+    plain_bar: bool = False,
 ) -> None:
-    """
-    A progress bar set to your task.
-    """
-
+    """Activate a progress bar set to your task."""
     if not plain_bar:
         total_so_far: int = 0
         for _ in track(range(seconds), description="Sleeping..."):
@@ -159,8 +156,7 @@ def numeric_intake(
     x_int: int = typer.Argument(..., min=0, max=2),
     y_int: int = typer.Argument(..., min=-1, max=1),
 ) -> int:
-    """
-    Has `min` and `max` restrictions on numeric arguments
+    """Has `min` and `max` restrictions on numeric arguments.
 
         Usage examples:
     >>> numeric_intake(4, 3)
