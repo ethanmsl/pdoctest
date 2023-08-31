@@ -186,17 +186,6 @@ files = [
 graph = ["objgraph (>=1.7.2)"]
 
 [[package]]
-name = "doctest-cli"
-version = "0.0.3"
-description = "Doctests for your shell"
-optional = false
-python-versions = "*"
-files = [
-    {file = "doctest-cli-0.0.3.tar.gz", hash = "sha256:44c8ae83e477bb6c056bde37df3aa30f84af91459554fb0ee4a7eb523f78b9b4"},
-    {file = "doctest_cli-0.0.3-py3-none-any.whl", hash = "sha256:bdd5e23107d3e8c35dbf6a9dcf1e6260ecb9ad0a40c316037a4f4326e2329f3f"},
-]
-
-[[package]]
 name = "gitdb"
 version = "4.0.10"
 description = "Git Object Database"
@@ -908,4 +897,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "0144ea85164f7c8c4dc69a660adcdd9c8e24860a9c6b5995a4a02bf340d38f83"
+content-hash = "4f7daf6faaf000cb913dba0ecd3bfdcc94e98959ba9d1f10c9e71189507ea4df"
