@@ -159,6 +159,15 @@ def numeric_intake(
     x_int: int = typer.Argument(..., min=0, max=2),
     y_int: int = typer.Argument(..., min=-1, max=1),
 ) -> int:
-    """Has `min` and `max` restrictions on numeric arguments"""
+    """
+    Has `min` and `max` restrictions on numeric arguments
+
+        Usage examples:
+    >>> numeric_intake(4, 333)
+    7
+    >>> numeric_intake(4, 2)
+    6
+
+    """
     rprint(f"[blue]X[/blue]: {x_int}, [green]Y[/green]: {y_int}")
     return x_int + y_int
