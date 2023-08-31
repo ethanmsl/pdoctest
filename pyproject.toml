@@ -9,22 +9,25 @@ packages = [{include = "pdoctest", from = "src"}]
 
 # declares name of CLI app and where the insertion point is
 [tool.poetry.scripts]
-pdoc = "pdoctest.commands:app"
+pdoctest = "pdoctest.commands:app"
 
 
 [tool.poetry.dependencies]
 python = "^3.11"
-typer = {extras = ["all"], version = "^0.7.0"}
+typer = {extras = ["all"], version = "^0.9.0"}
 
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.12.0"
+doctest-cli = "^0.0.3"
+bandit = "^1.7.5"
+ruff = "^0.0.286"
+black = "^23.7.0"
 isort = "^5.12.0"
-pdoc = "^12.3.1"
-pylint = "^2.15.10"
-pyright = "^1.1.291"
-pytest = "^7.2.1"
-pytest-cov = "^4.0.0"
+pdoc = "^14.0.0"
+pylint = "^2.17.5"
+pyright = "^1.1.325"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
