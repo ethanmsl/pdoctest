@@ -247,14 +247,16 @@ the typer framework and decorators.</p>
 </span><span id="L-163"><a href="#L-163"><span class="linenos">163</span></a><span class="sd">    Has `min` and `max` restrictions on numeric arguments</span>
 </span><span id="L-164"><a href="#L-164"><span class="linenos">164</span></a>
 </span><span id="L-165"><a href="#L-165"><span class="linenos">165</span></a><span class="sd">        Usage examples:</span>
-</span><span id="L-166"><a href="#L-166"><span class="linenos">166</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 333)</span>
-</span><span id="L-167"><a href="#L-167"><span class="linenos">167</span></a><span class="sd">    7</span>
-</span><span id="L-168"><a href="#L-168"><span class="linenos">168</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 2)</span>
-</span><span id="L-169"><a href="#L-169"><span class="linenos">169</span></a><span class="sd">    6</span>
-</span><span id="L-170"><a href="#L-170"><span class="linenos">170</span></a>
-</span><span id="L-171"><a href="#L-171"><span class="linenos">171</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-172"><a href="#L-172"><span class="linenos">172</span></a>    <span class="n">rprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[blue]X[/blue]: </span><span class="si">{</span><span class="n">x_int</span><span class="si">}</span><span class="s2">, [green]Y[/green]: </span><span class="si">{</span><span class="n">y_int</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="L-173"><a href="#L-173"><span class="linenos">173</span></a>    <span class="k">return</span> <span class="n">x_int</span> <span class="o">+</span> <span class="n">y_int</span>
+</span><span id="L-166"><a href="#L-166"><span class="linenos">166</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 3)</span>
+</span><span id="L-167"><a href="#L-167"><span class="linenos">167</span></a><span class="sd">    X: 4, Y: 3</span>
+</span><span id="L-168"><a href="#L-168"><span class="linenos">168</span></a><span class="sd">    7</span>
+</span><span id="L-169"><a href="#L-169"><span class="linenos">169</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 2)</span>
+</span><span id="L-170"><a href="#L-170"><span class="linenos">170</span></a><span class="sd">    X: 4, Y: 2</span>
+</span><span id="L-171"><a href="#L-171"><span class="linenos">171</span></a><span class="sd">    6</span>
+</span><span id="L-172"><a href="#L-172"><span class="linenos">172</span></a>
+</span><span id="L-173"><a href="#L-173"><span class="linenos">173</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-174"><a href="#L-174"><span class="linenos">174</span></a>    <span class="n">rprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[blue]X[/blue]: </span><span class="si">{</span><span class="n">x_int</span><span class="si">}</span><span class="s2">, [green]Y[/green]: </span><span class="si">{</span><span class="n">y_int</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="L-175"><a href="#L-175"><span class="linenos">175</span></a>    <span class="k">return</span> <span class="n">x_int</span> <span class="o">+</span> <span class="n">y_int</span>
 </span></pre></div>
 
 
@@ -540,14 +542,16 @@ command is still comming.</p>
 </span><span id="numeric_intake-164"><a href="#numeric_intake-164"><span class="linenos">164</span></a><span class="sd">    Has `min` and `max` restrictions on numeric arguments</span>
 </span><span id="numeric_intake-165"><a href="#numeric_intake-165"><span class="linenos">165</span></a>
 </span><span id="numeric_intake-166"><a href="#numeric_intake-166"><span class="linenos">166</span></a><span class="sd">        Usage examples:</span>
-</span><span id="numeric_intake-167"><a href="#numeric_intake-167"><span class="linenos">167</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 333)</span>
-</span><span id="numeric_intake-168"><a href="#numeric_intake-168"><span class="linenos">168</span></a><span class="sd">    7</span>
-</span><span id="numeric_intake-169"><a href="#numeric_intake-169"><span class="linenos">169</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 2)</span>
-</span><span id="numeric_intake-170"><a href="#numeric_intake-170"><span class="linenos">170</span></a><span class="sd">    6</span>
-</span><span id="numeric_intake-171"><a href="#numeric_intake-171"><span class="linenos">171</span></a>
-</span><span id="numeric_intake-172"><a href="#numeric_intake-172"><span class="linenos">172</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="numeric_intake-173"><a href="#numeric_intake-173"><span class="linenos">173</span></a>    <span class="n">rprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[blue]X[/blue]: </span><span class="si">{</span><span class="n">x_int</span><span class="si">}</span><span class="s2">, [green]Y[/green]: </span><span class="si">{</span><span class="n">y_int</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="numeric_intake-174"><a href="#numeric_intake-174"><span class="linenos">174</span></a>    <span class="k">return</span> <span class="n">x_int</span> <span class="o">+</span> <span class="n">y_int</span>
+</span><span id="numeric_intake-167"><a href="#numeric_intake-167"><span class="linenos">167</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 3)</span>
+</span><span id="numeric_intake-168"><a href="#numeric_intake-168"><span class="linenos">168</span></a><span class="sd">    X: 4, Y: 3</span>
+</span><span id="numeric_intake-169"><a href="#numeric_intake-169"><span class="linenos">169</span></a><span class="sd">    7</span>
+</span><span id="numeric_intake-170"><a href="#numeric_intake-170"><span class="linenos">170</span></a><span class="sd">    &gt;&gt;&gt; numeric_intake(4, 2)</span>
+</span><span id="numeric_intake-171"><a href="#numeric_intake-171"><span class="linenos">171</span></a><span class="sd">    X: 4, Y: 2</span>
+</span><span id="numeric_intake-172"><a href="#numeric_intake-172"><span class="linenos">172</span></a><span class="sd">    6</span>
+</span><span id="numeric_intake-173"><a href="#numeric_intake-173"><span class="linenos">173</span></a>
+</span><span id="numeric_intake-174"><a href="#numeric_intake-174"><span class="linenos">174</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="numeric_intake-175"><a href="#numeric_intake-175"><span class="linenos">175</span></a>    <span class="n">rprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[blue]X[/blue]: </span><span class="si">{</span><span class="n">x_int</span><span class="si">}</span><span class="s2">, [green]Y[/green]: </span><span class="si">{</span><span class="n">y_int</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="numeric_intake-176"><a href="#numeric_intake-176"><span class="linenos">176</span></a>    <span class="k">return</span> <span class="n">x_int</span> <span class="o">+</span> <span class="n">y_int</span>
 </span></pre></div>
 
 
@@ -557,9 +561,11 @@ command is still comming.</p>
 </code></pre>
 
 <div class="pdoc-code codehilite">
-<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">numeric_intake</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">333</span><span class="p">)</span>
+<pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">numeric_intake</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">X: 4, Y: 3</span>
 <span class="go">7</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">numeric_intake</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">X: 4, Y: 2</span>
 <span class="go">6</span>
 </code></pre>
 </div>

@@ -65,6 +65,28 @@ The line below will pull in the <code>README.md</code> file from the root of the
 
 <h2 id="auto-documentation-linkhttpsethanmslgithubiopdoctestpdoctesthtml"><a href="https://ethanmsl.github.io/pdoctest/pdoctest.html">Auto-Documentation Link</a></h2>
 
+<p>Updates to process:
+added line to <code>pyproject.toml</code>:</p>
+
+<div class="pdoc-code codehilite">
+<pre><span></span><code><span class="k">[tool.pytest.ini_options]</span>
+<span class="p">...</span>
+<span class="n">addopts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;--doctest-modules&quot;</span>
+<span class="p">...</span>
+</code></pre>
+</div>
+
+<p>change to <code>pre-commit</code> hook test line:</p>
+
+<div class="pdoc-code codehilite">
+<pre><span></span><code>pytest<span class="w"> </span>--cov-report<span class="o">=</span>term-missing<span class="w"> </span>--cov-fail-under<span class="o">=</span><span class="nv">$test_coverage_min</span><span class="w"> </span>--cov<span class="o">=</span>src/
+</code></pre>
+</div>
+
+<p>(we removed the <code>tests/</code> at the end, which was not needed for indicating proper coverage and for some reason caused the <code>--doctest-modules</code> to be ignored, whether manually inserted in a terminal call or via the <code>addopts</code> field in <code>pyproject.toml</code>)</p>
+
+<p>Together these get succesful doctest testing :excite: :)</p>
+
 <h2 id="dev-dependencies-specified">Dev-Dependencies Specified</h2>
 
 <ul>
