@@ -89,9 +89,6 @@ coverage[toml]==7.3.0 ; python_version >= "3.11" and python_version < "4.0" \
 dill==0.3.7 ; python_version >= "3.11" and python_version < "4.0" \
     --hash=sha256:76b122c08ef4ce2eedcd4d1abd8e641114bfc6c2867f49f3c41facf65bf19f5e \
     --hash=sha256:cc1c8b182eb3013e24bd475ff2e9295af86c1a38eb1aff128dac8962a9ce3c03
-doctest-cli==0.0.3 ; python_version >= "3.11" and python_version < "4.0" \
-    --hash=sha256:44c8ae83e477bb6c056bde37df3aa30f84af91459554fb0ee4a7eb523f78b9b4 \
-    --hash=sha256:bdd5e23107d3e8c35dbf6a9dcf1e6260ecb9ad0a40c316037a4f4326e2329f3f
 gitdb==4.0.10 ; python_version >= "3.11" and python_version < "4.0" \
     --hash=sha256:6eb990b69df4e15bad899ea868dc46572c3f75339735663b81de79b06f17eb9a \
     --hash=sha256:c286cf298426064079ed96a9e4a9d39e7f3e9bf15ba60701e95f5492f28415c7
