@@ -22,3 +22,14 @@ def test_version_callback():
     assert commands.version_callback(False) is None
     with pytest.raises(typer.Exit):
         commands.version_callback(True)
+
+
+def test_pword() -> None:
+    """doesn't really test pword"""
+
+    assert commands.pword("bob") is None
+
+
+def test_numeric_intake():
+    """tests numeric_intake"""
+    assert commands.numeric_intake(2, 3) == 5
