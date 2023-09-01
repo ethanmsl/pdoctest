@@ -1,9 +1,9 @@
-"""
-May not be anything to test here as `__main__.py` is typically just an entry point
-into the program
+"""May not be anything to test here.
+
+As `__main__.py` is typically just an entry pointinto the program
 """
 
 
-def test_truisim():
-    """Test: True is True"""
+def test_truisim() -> None:
+    """Test: True is True."""
     assert True
