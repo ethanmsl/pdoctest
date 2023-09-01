@@ -101,7 +101,7 @@ ignore = [
 ]
 # ignore these rules in the file testing CLI commands
 "test_commands.py" =[
-    "FBT003",  # No `bool` param in call -- CLI argument values in Typer module
+    "FBT003",  # No `bool` in func calls -- functions being tested represent CLI args
 ]
 # ignore these rules in the file testing CLI commands
 "test_*.py" =[
